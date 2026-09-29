@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="banner.svg" alt="Sec-XRay Cyberpunk Banner" width="100%" />
+  <img src="banner.png" alt="Sec-XRay Cyberpunk Banner" width="100%" />
 
   <br/><br/>
 
