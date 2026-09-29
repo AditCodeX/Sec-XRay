@@ -4,7 +4,7 @@ setup(
     name="sec-xray",
     version="1.0.0",
     description="Passive & Dynamic SPA/JS Reconnaissance Engine",
-    author="Aditya Agung Triwibowo",
+    author="AditCodeX",
     url="https://github.com/AditCodeX/Sec-XRay",
     py_modules=["sec_xray"],
     install_requires=[
