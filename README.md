@@ -12,7 +12,7 @@
 
 ---
 
-## ⚡ Overview
+## Overview
 
 **Sec-XRay v1.0.0** is a high-performance reconnaissance CLI tool designed to aggressively dissect Single Page Applications (SPA), React/Vue/Angular webapps, and JavaScript bundles. It extracts hidden API endpoints, JSON payload structures, query parameters, and hardcoded credentials.
 
@@ -20,19 +20,19 @@ Unlike traditional passive browser extensions, Sec-XRay operates using a **Headl
 
 ---
 
-## 💎 Key Features
+## Key Features
 
-- 🕵️ **Headless Interception + WAF Stealth:** Bypasses Cloudflare & Akamai challenges utilizing `playwright-stealth` (v2.0 evasions).
-- 🚀 **Deep Crawl Engine:** Automatically clicks buttons, dropdowns, and links (Event-Driven DOM Trigger) to expose APIs hidden behind user interactions.
-- 🗺️ **Source-Map Recovery:** Detects and reconstructs backend developer folder structures from leaked `.js.map` files.
-- 📦 **Smart Postman Collection Generator:** Pieces together Endpoints + JSON Keys into ready-to-fuzz `POST` and `GET` requests inside an importable Postman JSON collection (strict per-source mapping, zero payload over-stuffing).
-- 🔥 **Secret Leaks Scanner:** Employs heuristical regex to catch hardcoded AWS Keys, Google API Keys, JWT Tokens, and sensitive credentials with false-positive suppression (filtering UI labels & i18n keys).
-- ⚙️ **Multi-Threaded Batch Scanning:** Feed it a `.txt` file with hundreds of subdomains and it will spin up concurrent browser workers.
-- 🌐 **Global PATH Integration:** Single-click installers automatically configure your environment PATH so you can launch `sec-xray` from any terminal directory.
+- **Headless Interception + WAF Stealth:** Bypasses Cloudflare & Akamai challenges utilizing `playwright-stealth` (v2.0 evasions).
+- **Deep Crawl Engine:** Automatically clicks buttons, dropdowns, and links (Event-Driven DOM Trigger) to expose APIs hidden behind user interactions.
+- **Source-Map Recovery:** Detects and reconstructs backend developer folder structures from leaked `.js.map` files.
+- **Smart Postman Collection Generator:** Pieces together Endpoints + JSON Keys into ready-to-fuzz `POST` and `GET` requests inside an importable Postman JSON collection (strict per-source mapping, zero payload over-stuffing).
+- **Secret Leaks Scanner:** Employs heuristical regex to catch hardcoded AWS Keys, Google API Keys, JWT Tokens, and sensitive credentials with false-positive suppression (filtering UI labels & i18n keys).
+- **Multi-Threaded Batch Scanning:** Feed it a `.txt` file with hundreds of subdomains and it will spin up concurrent browser workers.
+- **Global PATH Integration:** Single-click installers automatically configure your environment PATH so you can launch `sec-xray` from any terminal directory.
 
 ---
 
-## 🛠️ Installation & Auto-PATH Setup
+## Installation & Auto-PATH Setup
 
 **Prerequisites:** Python 3.8 or newer with pip.
 
@@ -59,7 +59,7 @@ The installer will automatically install all Python dependencies, download Chrom
 
 ---
 
-## 🚀 Instant Global Execution
+## Instant Global Execution
 
 Once installed, restart your terminal or open a new tab. You can now launch **Sec-XRay from any directory**:
 
@@ -69,7 +69,7 @@ sec-xray
 
 ---
 
-## 🎯 Usage Guide
+## Usage Guide
 
 ### Supported Target Formats
 | Target Format | Description & Behavior | Command Example |
@@ -97,7 +97,7 @@ Inside the `sec-xray ❯` shell:
 
 ---
 
-## 📊 Outputs & Artifacts
+## Outputs & Artifacts
 
 After every scan, **Sec-XRay** automatically deduplicates your findings and exports them directly into your current working directory:
 
@@ -106,7 +106,7 @@ After every scan, **Sec-XRay** automatically deduplicates your findings and expo
 
 ---
 
-## ⚠️ Legal Disclaimer
+## Legal Disclaimer
 
 Sec-XRay is developed strictly for **educational purposes, ethical hacking, and authorized penetration testing**. 
 The authors and contributors are **NOT** responsible for any misuse, damage, or illegal activities caused by utilizing this tool. Only run Sec-XRay against systems you own or have explicit, documented permission to test.
