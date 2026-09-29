@@ -5,7 +5,7 @@
 
   [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
   [![Playwright](https://img.shields.io/badge/playwright-ready-brightgreen.svg)](https://playwright.dev/python/)
-  [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
   [![Release: v1.0.0](https://img.shields.io/badge/release-v1.0.0-green.svg)](https://github.com/AditCodeX/Sec-XRay)
 
 </div>
