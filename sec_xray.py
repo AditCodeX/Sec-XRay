@@ -48,58 +48,61 @@ except ImportError:
 
 
 def print_banner():
-    # Top Tactical Bar
+    # Top Tactical Bar (Matching banner.png)
     top_grid = Table.grid(expand=True)
     top_grid.add_column(justify="left", style="bold cyan")
     top_grid.add_column(justify="right", style="dim")
     top_grid.add_row("[+] SEC_OPS // OFFENSIVE_RECON", "BUILD: [bold green]v1.0.0_STABLE[/] // ARCH: [bold white]HEADLESS_DOM[/]")
 
-    # Slant Logo
-    slant = r"""[bold white]
-   _____            __  ______             
-  / ___/___  _____  \ \/ / __ \____ ___  __
-  \__ \/ _ \/ ___/   \  / /_/ / __ `/ / / /
- ___/ /  __/ /__     / / _, _/ /_/ / /_/ / 
-/____/\___/\___/    /_/_/ |_|\__,_/\__, /  
-                                  /____/   [/]"""
+    # Solid Block Letters Matching banner.png
+    # SEC (white) - (cyan) X (cyan) RAY (white)
+    logo_rows = [
+        "[bold white]██████  ██████   █████[/]            [bold cyan]██   ██[/]  [bold white]██████   ████   ██   ██[/]",
+        "[bold white]██      ██      ██    [/]             [bold cyan]██ ██ [/]  [bold white]██  ██  ██  ██   ██ ██ [/]",
+        "[bold white]██████  █████   ██    [/]   [bold bright_cyan]████[/]       [bold cyan]███  [/]   [bold white]█████   ██████    ███  [/]",
+        "[bold white]    ██  ██      ██    [/]             [bold cyan]██ ██ [/]  [bold white]██  ██  ██  ██     ██  [/]",
+        "[bold white]██████  ██████   █████[/]            [bold cyan]██   ██[/]  [bold white]██  ██  ██  ██     ██  [/]"
+    ]
+    logo_text = "\n".join(logo_rows)
 
-    # Center Content
+    # Center Section
     center_layout = Table.grid(expand=True)
     center_layout.add_column(justify="center")
-    center_layout.add_row(Align.center(slant))
-    center_layout.add_row("[bold cyan]PASSIVE & DYNAMIC SPA/JS RECONNAISSANCE ENGINE[/]\n")
+    center_layout.add_row("")
+    center_layout.add_row(Align.center(logo_text))
+    center_layout.add_row("")
+    center_layout.add_row("[bold #94a3b8]PASSIVE & DYNAMIC SPA/JS RECONNAISSANCE ENGINE[/]")
+    center_layout.add_row("")
 
-    # Bottom Telemetry Badges (2 rows, 2 columns for clean terminal formatting)
-    stealth_badge = "[bold green]Active (v2.0)[/]" if STEALTH_AVAILABLE else "[bold yellow]Disabled[/]"
-    playwright_badge = "[bold green]Ready[/]" if PLAYWRIGHT_AVAILABLE else "[bold red]Not Installed[/]"
+    # Bottom Telemetry Badges (Matching the 4 telemetry cards in banner.png)
+    stealth_badge = "[bold #10b981]STEALTH_V2 (ACTIVE)[/]" if STEALTH_AVAILABLE else "[bold yellow]STEALTH (DISABLED)[/]"
+    playwright_badge = "[bold #38bdf8]CHROMIUM (READY)[/]" if PLAYWRIGHT_AVAILABLE else "[bold red]CHROMIUM (MISSING)[/]"
 
     bottom_grid = Table.grid(padding=(0, 3))
-    bottom_grid.add_column(justify="left", style="dim")
     bottom_grid.add_column(justify="left")
-    bottom_grid.add_column(justify="left", style="dim")
     bottom_grid.add_column(justify="left")
 
     bottom_grid.add_row(
-        "[01] ENGINE  :", f"[bold cyan]Chromium Headless ({playwright_badge})[/]",
-        "[02] EVASION :", stealth_badge
+        "[dim][01] ENGINE  :[/] " + playwright_badge,
+        "[dim][02] EVASION :[/] " + stealth_badge
     )
     bottom_grid.add_row(
-        "[03] CRAWL   :", "[bold white]Event-Driven DOM Trigger[/]",
-        "[04] EXPORT  :", "[bold yellow]CSV + Postman v2.1[/]"
+        "[dim][03] CRAWL   :[/] [bold #f8fafc]EVENT_DOM TRIGGER[/]",
+        "[dim][04] EXPORT  :[/] [bold #f59e0b]CSV + POSTMAN v2.1[/]"
     )
 
-    # Outer Tactical HUD Container
+    # Outer Tactical HUD Container (Matching banner.png border & framing)
     main_table = Table.grid(expand=True, padding=(0, 0))
     main_table.add_column()
     main_table.add_row(top_grid)
-    main_table.add_row(Rule(style="dim #334155"))
+    main_table.add_row(Rule(style="dim #1e293b"))
     main_table.add_row(center_layout)
-    main_table.add_row(Rule(style="dim #334155"))
+    main_table.add_row(Rule(style="dim #1e293b"))
     main_table.add_row(Align.center(bottom_grid))
 
     hud_panel = Panel(
         main_table,
-        border_style="bright_cyan",
+        border_style="#00f0ff",
         box=box.ROUNDED,
         padding=(1, 2)
     )
