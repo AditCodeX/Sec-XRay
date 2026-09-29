@@ -14,6 +14,7 @@ from rich.panel import Panel
 from rich.table import Table
 from rich.text import Text
 from rich.align import Align
+from rich.rule import Rule
 from rich import box
 
 console = Console()
@@ -47,41 +48,64 @@ except ImportError:
 
 
 def print_banner():
-    banner_ascii = r"""[bold cyan]
+    # Top Tactical Bar
+    top_grid = Table.grid(expand=True)
+    top_grid.add_column(justify="left", style="bold cyan")
+    top_grid.add_column(justify="right", style="dim")
+    top_grid.add_row("[+] SEC_OPS // OFFENSIVE_RECON", "BUILD: [bold green]v1.0.0_STABLE[/] // ARCH: [bold white]HEADLESS_DOM[/]")
+
+    # Slant Logo
+    slant = r"""[bold white]
    _____            __  ______             
   / ___/___  _____  \ \/ / __ \____ ___  __
   \__ \/ _ \/ ___/   \  / /_/ / __ `/ / / /
  ___/ /  __/ /__     / / _, _/ /_/ / /_/ / 
 /____/\___/\___/    /_/_/ |_|\__,_/\__, /  
-                                  /____/   [/]
-[dim]  Passive & Dynamic SPA/JS Reconnaissance Engine [bold cyan]v1.0.0[/]"""
+                                  /____/   [/]"""
 
-    console.print()
-    console.print(Align.center(banner_ascii))
-    console.print()
+    # Center Content
+    center_layout = Table.grid(expand=True)
+    center_layout.add_column(justify="center")
+    center_layout.add_row(Align.center(slant))
+    center_layout.add_row("[bold cyan]PASSIVE & DYNAMIC SPA/JS RECONNAISSANCE ENGINE[/]\n")
 
-    meta_grid = Table.grid(padding=(0, 2))
-    meta_grid.add_column(style="bold bright_cyan")
-    meta_grid.add_column(style="white")
-    meta_grid.add_column(style="bold bright_cyan")
-    meta_grid.add_column(style="white")
-
+    # Bottom Telemetry Badges (2 rows, 2 columns for clean terminal formatting)
     stealth_badge = "[bold green]Active (v2.0)[/]" if STEALTH_AVAILABLE else "[bold yellow]Disabled[/]"
     playwright_badge = "[bold green]Ready[/]" if PLAYWRIGHT_AVAILABLE else "[bold red]Not Installed[/]"
 
-    meta_grid.add_row("Browser Engine :", f"[cyan]Chromium Headless ({playwright_badge})[/]", "Stealth Evasion :", stealth_badge)
-    meta_grid.add_row("Deep Crawl     :", "[magenta]Event-Driven DOM Trigger[/]", "Export Pipelines:", "[magenta]CSV + Postman v2.1[/]")
-    meta_grid.add_row("Working Dir    :", f"[dim]{os.getcwd()}[/]", "Session State   :", "[green]Thread-Safe Set (Zero Dupe)[/]")
+    bottom_grid = Table.grid(padding=(0, 3))
+    bottom_grid.add_column(justify="left", style="dim")
+    bottom_grid.add_column(justify="left")
+    bottom_grid.add_column(justify="left", style="dim")
+    bottom_grid.add_column(justify="left")
 
-    header_panel = Panel(
-        Align.center(meta_grid),
-        title="[bold bright_blue] SYSTEM STATUS & TELEMETRY [/]",
-        title_align="center",
-        border_style="bright_blue",
+    bottom_grid.add_row(
+        "[01] ENGINE  :", f"[bold cyan]Chromium Headless ({playwright_badge})[/]",
+        "[02] EVASION :", stealth_badge
+    )
+    bottom_grid.add_row(
+        "[03] CRAWL   :", "[bold white]Event-Driven DOM Trigger[/]",
+        "[04] EXPORT  :", "[bold yellow]CSV + Postman v2.1[/]"
+    )
+
+    # Outer Tactical HUD Container
+    main_table = Table.grid(expand=True, padding=(0, 0))
+    main_table.add_column()
+    main_table.add_row(top_grid)
+    main_table.add_row(Rule(style="dim #334155"))
+    main_table.add_row(center_layout)
+    main_table.add_row(Rule(style="dim #334155"))
+    main_table.add_row(Align.center(bottom_grid))
+
+    hud_panel = Panel(
+        main_table,
+        border_style="bright_cyan",
         box=box.ROUNDED,
         padding=(1, 2)
     )
-    console.print(header_panel)
+
+    console.print()
+    console.print(hud_panel)
     console.print("[dim]Type [bold cyan]help[/] for command overview or [bold cyan]scan <target/list.txt>[/] to begin reconnaissance.[/]\n")
 
 
