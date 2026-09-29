@@ -1,22 +1,18 @@
 <div align="center">
+  <img src="banner.svg" alt="Sec-XRay Cyberpunk Banner" width="100%" />
 
-```text
- ███████╗███████╗ ██████╗       ██╗  ██╗██████╗  █████╗ ██╗   ██╗
- ██╔════╝██╔════╝██╔════╝       ╚██╗██╔╝██╔══██╗██╔══██╗╚██╗ ██╔╝
- ███████╗█████╗  ██║     █████╗  ╚███╔╝ ██████╔╝███████║ ╚████╔╝ 
- ╚════██║██╔══╝  ██║     ╚════╝  ██╔██╗ ██╔══██╗██╔══██║  ╚██╔╝  
- ███████║███████╗╚██████╗       ██╔╝ ██╗██║  ██║██║  ██║   ██║   
- ╚══════╝╚══════╝ ╚═════╝       ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   
-```
+  <br/><br/>
 
-**Passive & Dynamic SPA/JS Reconnaissance Engine**  
-**v1.0.0 • Production Release** • Developed for Red Teamers & Bug Bounty Hunters
+  [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+  [![Playwright](https://img.shields.io/badge/Playwright-Enabled-brightgreen.svg)](https://playwright.dev/python/)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![Build: v1.0.0](https://img.shields.io/badge/Release-v1.0.0-purple.svg)](https://github.com/AditCodeX/Sec-XRay)
 
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Playwright](https://img.shields.io/badge/Playwright-Enabled-brightgreen.svg)](https://playwright.dev/python/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Build: v1.0.0](https://img.shields.io/badge/Release-v1.0.0-purple.svg)](https://github.com/AditCodeX/Sec-XRay)
+  <br/><br/>
 
+  <p align="center">
+    <b>High-Performance Passive & Dynamic Reconnaissance Engine for Single Page Applications (SPA), React/Vue/Angular, and JavaScript Bundles.</b>
+  </p>
 </div>
 
 ---

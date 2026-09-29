@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 250" width="100%" height="250">
+  <defs>
+    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0.8"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <rect width="100%" height="100%" rx="16" fill="#090d16" stroke="url(#border-grad)" stroke-width="1.5"/>
+  
+  <g font-family="'Courier New', Consolas, Monaco, monospace" font-size="16" font-weight="bold" text-anchor="middle" filter="url(#glow)">
+    <tspan x="50%" y="65" fill="#00f0ff">███████╗███████╗ ██████╗       ██╗  ██╗██████╗  █████╗ ██╗   ██╗</tspan>
+<tspan x="50%" y="89" fill="#38bdf8">██╔════╝██╔════╝██╔════╝       ╚██╗██╔╝██╔══██╗██╔══██╗╚██╗ ██╔╝</tspan>
+<tspan x="50%" y="113" fill="#818cf8">███████╗█████╗  ██║     █████╗  ╚███╔╝ ██████╔╝███████║ ╚████╔╝ </tspan>
+<tspan x="50%" y="137" fill="#c084fc">╚════██║██╔══╝  ██║     ╚════╝  ██╔██╗ ██╔══██╗██╔══██║  ╚██╔╝  </tspan>
+<tspan x="50%" y="161" fill="#f43f5e">███████║███████╗╚██████╗       ██╔╝ ██╗██║  ██║██║  ██║   ██║   </tspan>
+<tspan x="50%" y="185" fill="#fb7185">╚══════╝╚══════╝ ╚═════╝       ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   </tspan>
+
+  </g>
+  
+  <text x="50%" y="222" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#94a3b8" letter-spacing="1.5">
+    ⚡ PASSIVE &amp; DYNAMIC SPA/JS RECONNAISSANCE ENGINE • <tspan fill="#00f0ff">v1.0.0</tspan> ⚡
+  </text>
+</svg>

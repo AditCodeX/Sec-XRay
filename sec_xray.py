@@ -13,6 +13,7 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
 from rich.text import Text
+from rich.align import Align
 from rich import box
 
 console = Console()
@@ -46,16 +47,19 @@ except ImportError:
 
 
 def print_banner():
-    banner_ascii = """[bold bright_cyan]
- ███████╗███████╗ ██████╗       ██╗  ██╗██████╗  █████╗ ██╗   ██╗
- ██╔════╝██╔════╝██╔════╝       ╚██╗██╔╝██╔══██╗██╔══██╗╚██╗ ██╔╝
- ███████╗█████╗  ██║     █████╗  ╚███╔╝ ██████╔╝███████║ ╚████╔╝ 
- ╚════██║██╔══╝  ██║     ╚════╝  ██╔██╗ ██╔══██╗██╔══██║  ╚██╔╝  
- ███████║███████╗╚██████╗       ██╔╝ ██╗██║  ██║██║  ██║   ██║   
- ╚══════╝╚══════╝ ╚═════╝       ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   [/]
-[bold white]  Passive & Dynamic SPA/JS Reconnaissance Engine [bold bright_magenta]v1.0.0[/]"""
+    banner_lines = [
+        "[bold bright_cyan] ███████╗███████╗ ██████╗       ██╗  ██╗██████╗  █████╗ ██╗   ██╗[/]",
+        "[bold cyan] ██╔════╝██╔════╝██╔════╝       ╚██╗██╔╝██╔══██╗██╔══██╗╚██╗ ██╔╝[/]",
+        "[bold bright_blue] ███████╗█████╗  ██║     █████╗  ╚███╔╝ ██████╔╝███████║ ╚████╔╝ [/]",
+        "[bold magenta] ╚════██║██╔══╝  ██║     ╚════╝  ██╔██╗ ██╔══██╗██╔══██║  ╚██╔╝  [/]",
+        "[bold bright_magenta] ███████║███████╗╚██████╗       ██╔╝ ██╗██║  ██║██║  ██║   ██║   [/]",
+        "[bold magenta] ╚══════╝╚══════╝ ╚═════╝       ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   [/]"
+    ]
+    banner_ascii = "\n".join(banner_lines)
 
-    console.print(banner_ascii)
+    console.print()
+    console.print(Align.center(banner_ascii))
+    console.print(Align.center("[bold white]⚡ Passive & Dynamic SPA/JS Reconnaissance Engine [bold bright_magenta]v1.0.0[/] ⚡\n"))
 
     meta_grid = Table.grid(padding=(0, 2))
     meta_grid.add_column(style="bold bright_cyan")
@@ -71,9 +75,9 @@ def print_banner():
     meta_grid.add_row("Working Dir    :", f"[dim]{os.getcwd()}[/]", "Session State   :", "[green]Thread-Safe Set (Zero Dupe)[/]")
 
     header_panel = Panel(
-        meta_grid,
+        Align.center(meta_grid),
         title="[bold bright_blue] SYSTEM STATUS & TELEMETRY [/]",
-        title_align="left",
+        title_align="center",
         border_style="bright_blue",
         box=box.ROUNDED,
         padding=(1, 2)
