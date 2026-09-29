@@ -47,19 +47,18 @@ except ImportError:
 
 
 def print_banner():
-    banner_lines = [
-        "[bold bright_cyan] ███████╗███████╗ ██████╗       ██╗  ██╗██████╗  █████╗ ██╗   ██╗[/]",
-        "[bold cyan] ██╔════╝██╔════╝██╔════╝       ╚██╗██╔╝██╔══██╗██╔══██╗╚██╗ ██╔╝[/]",
-        "[bold bright_blue] ███████╗█████╗  ██║     █████╗  ╚███╔╝ ██████╔╝███████║ ╚████╔╝ [/]",
-        "[bold magenta] ╚════██║██╔══╝  ██║     ╚════╝  ██╔██╗ ██╔══██╗██╔══██║  ╚██╔╝  [/]",
-        "[bold bright_magenta] ███████║███████╗╚██████╗       ██╔╝ ██╗██║  ██║██║  ██║   ██║   [/]",
-        "[bold magenta] ╚══════╝╚══════╝ ╚═════╝       ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   [/]"
-    ]
-    banner_ascii = "\n".join(banner_lines)
+    banner_ascii = r"""[bold cyan]
+   _____            __  ______             
+  / ___/___  _____  \ \/ / __ \____ ___  __
+  \__ \/ _ \/ ___/   \  / /_/ / __ `/ / / /
+ ___/ /  __/ /__     / / _, _/ /_/ / /_/ / 
+/____/\___/\___/    /_/_/ |_|\__,_/\__, /  
+                                  /____/   [/]
+[dim]  Passive & Dynamic SPA/JS Reconnaissance Engine [bold cyan]v1.0.0[/]"""
 
     console.print()
     console.print(Align.center(banner_ascii))
-    console.print(Align.center("[bold white]⚡ Passive & Dynamic SPA/JS Reconnaissance Engine [bold bright_magenta]v1.0.0[/] ⚡\n"))
+    console.print()
 
     meta_grid = Table.grid(padding=(0, 2))
     meta_grid.add_column(style="bold bright_cyan")

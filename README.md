@@ -1,18 +1,22 @@
 <div align="center">
-  <img src="banner.png" alt="Sec-XRay Cyberpunk Banner" width="100%" />
 
-  <br/><br/>
+```text
+   _____            __  ______             
+  / ___/___  _____  \ \/ / __ \____ ___  __
+  \__ \/ _ \/ ___/   \  / /_/ / __ `/ / / /
+ ___/ /  __/ /__     / / _, _/ /_/ / /_/ / 
+/____/\___/\___/    /_/_/ |_|\__,_/\__, /  
+                                  /____/   
+```
 
-  [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-  [![Playwright](https://img.shields.io/badge/Playwright-Enabled-brightgreen.svg)](https://playwright.dev/python/)
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  [![Build: v1.0.0](https://img.shields.io/badge/Release-v1.0.0-purple.svg)](https://github.com/AditCodeX/Sec-XRay)
+**Passive & Dynamic SPA/JS Reconnaissance Engine**  
+*Fast endpoint, parameter, and secret extraction for modern Single Page Applications.*
 
-  <br/><br/>
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Playwright](https://img.shields.io/badge/playwright-ready-brightgreen.svg)](https://playwright.dev/python/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Release: v1.0.0](https://img.shields.io/badge/release-v1.0.0-green.svg)](https://github.com/AditCodeX/Sec-XRay)
 
-  <p align="center">
-    <b>High-Performance Passive & Dynamic Reconnaissance Engine for Single Page Applications (SPA), React/Vue/Angular, and JavaScript Bundles.</b>
-  </p>
 </div>
 
 ---
