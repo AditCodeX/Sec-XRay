@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# Local scan artifacts
+*.csv
+*_postman.json
+targets.txt
+test_*.js
